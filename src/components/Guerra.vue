@@ -157,7 +157,7 @@ const restablecerValores = (item) => {
 
 
 
-
+setJuego();
 
 
 const url = 'https://651385e18e505cebc2e9ece5.mockapi.io/dinamica/2'
@@ -170,12 +170,12 @@ const entrarASala = () => {
         datosPeleaActuales.value.hayJ1 = true;
         jugador1 = true;
         pude = true;
-        setJuego();
+        // setJuego();
     } else if (datosSala.value.hayJ2 === false) {
         datosPeleaActuales.value.hayJ2 = true;
         jugador2 = true;
         pude = true;
-        restablecerValores(datosPeleaActuales);
+        // restablecerValores(datosPeleaActuales.value);
     }
     Actualizar();
     if (!pude) {
