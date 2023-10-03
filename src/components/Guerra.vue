@@ -170,10 +170,12 @@ const entrarASala = () => {
         datosPeleaActuales.value.hayJ1 = true;
         jugador1 = true;
         pude = true;
+        setJuego();
     } else if (datosSala.value.hayJ2 === false) {
         datosPeleaActuales.value.hayJ2 = true;
         jugador2 = true;
         pude = true;
+        restablecerValores(datosPeleaActuales);
     }
     Actualizar();
     if (!pude) {
@@ -259,7 +261,7 @@ const settingLocal = () => {
 
 
 
-setJuego();
+
 onMounted(() => {
     const intervalo = setInterval(ObtenerValor, 5000)
     const intervalo2 = setInterval(checkGanador, 5000)
